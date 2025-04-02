@@ -6,7 +6,15 @@
     box-sizing: border-box;
     outline: none;
     font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
 }
+/* SCROLL MARGIN TOP ZA LINKOVE */
+.cenovnik,
+.events,
+.kontakt{
+    scroll-margin-top: 50px;
+}
+
 ::-webkit-scrollbar{
    width: 15px;
 }
@@ -60,6 +68,7 @@ video{
     color: #f1f1f1;
     font-weight: 700;
     font-family: 'Goldman';
+    position: relative;
 }
 .nav .logo p span{
     color: #bf2a2c;
@@ -437,6 +446,19 @@ video{
 }
 .kontakt-content ul li p i{
     color: #bf2a2c;
+}
+.kontakt-content a{
+    text-decoration: none;   
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #bf2a2c;
+    transition: 0.425s all ease;
+}
+.kontakt-content a:hover,
+.kontat-content li a i:hover{
+    color: #631717;
 }
 footer{
     text-align: center;
