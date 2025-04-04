@@ -30,14 +30,14 @@
                 <p>ApexSim<span>Racing</span></p>
             </div>
             <ul>
-                <li><a href="#cenovnikNav">Cenovnik</a></li>
-                <li><a href="#eventsNav">Događaji</a></li>
-                <li><a href="#kontaktNav">Kontakt</a></li>
+                <li><a href="#cenovnikNav" class="scroll-link">Cenovnik</a></li>
+                <li><a href="#eventsNav" class="scroll-link">Događaji</a></li>
+                <li><a href="#kontaktNav" class="scroll-link">Kontakt</a></li>
             </ul>
         </div>
         <div class="hero">
             <h1>Spremi se za trku u <span>ApexSim<span>Racing</span></span> – Prvom sim racing centru u Nišu!</h1>
-            <a href="#kontaktNav">Zakaži svoj termin <i class='bx bx-chevrons-right'></i></a>
+            <a href="#kontaktNav" class="scroll-link">Zakaži svoj termin <i class='bx bx-chevrons-right'></i></a>
         </div>
     </content>
 
@@ -111,7 +111,7 @@
             <div class="rent-header">
                 <h1>IZNAJMITE VRHUNSKI SIMULATOR<br><span>24H</span> ILI <span>48H</span>!</h1>
                 <p>Želite da uživate u vrhunskom sim racing iskustvu iz udobnosti svog doma? Sada možete iznajmiti profesionalni trkački simulator i voziti kad god poželite!</p>
-                <a href="#kontaktNav">Iznajmi odmah <i class='bx bx-chevrons-right' ></i></a>
+                <a href="#kontaktNav" class="scroll-link">Iznajmi odmah <i class='bx bx-chevrons-right' ></i></a>
             </div>
         </div>
     </div>
@@ -246,5 +246,22 @@
     <footer>
         <p>Copyright &copy; 2025 Aleksandar Đorđević. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        window.onload = function () {
+            window.scrollTo(0, 0);
+        };
+
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // sprečava menjanje URL-a
+                const targetId = this.getAttribute('href').replace('#', '');
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
